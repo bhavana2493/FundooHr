@@ -1,0 +1,83 @@
+body{
+    background-color: #D8D1C7;
+    background-size:initial;
+}
+.login-box{
+ display: inline-block;
+    width: 300px;
+    height: 396px;
+    margin:5% auto auto 36%;
+    font-family: AppleGothic;
+    /*margin-top:5%;*/
+}
+.login-box img {
+  /*box-shadow: 1px 1px 1px ;*/
+  -webkit-filter: drop-shadow(4px 4px 4px grey);
+ /*filter: drop-shadow(5px 5px 5px white);*/
+ box-shadow: 10px;
+  margin-left: 101px;
+    margin-right:101px;
+}
+.login{
+    display: inline-block;
+     width: 300px;
+     height:290px;
+     background-color:  rgba(247, 245, 241, 0.82);
+     color:rgba(59, 83, 114, 1);
+     border-radius: 10px;
+     border:  white;
+     /*box-shadow: 1px 1px 1px 1px;*/
+     }
+.login div {
+
+    margin-top:19px;
+    text-align: center;
+    font-size: 28px;
+    
+}
+.login form #input1 {
+    height:50px;
+    padding-left:17px;
+    padding-right:18px;
+    font-size: 18px;
+    color:rgba(59, 83, 114, 1);
+}
+.login form md-input-container input{
+    border: none;
+    border-bottom: 1px solid rgba(59, 83, 114, 1);
+}
+
+.login form md-input-container label{
+    color:rgba(59, 83, 114, 1);
+     padding-left:17px !important;
+}
+.login form #input2{
+    height: 35px;
+    padding-left:17px;
+    padding-right:18px;
+    font-size: 18px;
+    color:rgba(59, 83, 114, 1);
+}
+.login form button{
+    margin-left:93.5px;
+    width:113px;
+    height: 41px;
+    font-size: 18px;
+    
+    border:1px solid rgba(59, 83, 114, 1);
+}
+.text-danger{
+    color:rgba(236, 13, 13, 1);
+    font-size: 12px;
+}
+.md-raised[disabled]{
+    color:rgba(59, 83, 114, 1);
+    background-color: rgba(247, 245, 241, 0.82);
+}
+.md-raised{
+    color:rgba(255, 255, 255, 1);
+    background-color: rgba(59, 83, 114, 1);
+    /*background-color : black;*/
+}
+
+
