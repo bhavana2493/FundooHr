@@ -1,15 +1,28 @@
-body{
+
+body.login-page{
     background-color: #D8D1C7;
     background-size:initial;
+}
+body{
+    background-color: white;
 }
 .login-box{
  display: inline-block;
     width: 300px;
     height: 396px;
-    margin:5% auto auto 36%;
+    margin-top:5%;
+    margin-left:35%;
     font-family: AppleGothic;
     /*margin-top:5%;*/
 }
+/*@media (max-width: 800px){
+
+	.login-box{
+		margin-top:auto;
+    margin-left:10%;
+    margin-right:10%;
+	}*/
+
 .login-box img {
   /*box-shadow: 1px 1px 1px ;*/
   -webkit-filter: drop-shadow(4px 4px 4px grey);
@@ -78,6 +91,12 @@ body{
     color:rgba(255, 255, 255, 1);
     background-color: rgba(59, 83, 114, 1);
     /*background-color : black;*/
+}
+/*navbar content*/
+@media(min-width:760px){
+    .row{
+        margin-top:50px;
+    }
 }
 
 

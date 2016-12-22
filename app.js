@@ -24,7 +24,7 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
         .state('login', {
             url: '/login',
             templateUrl: 'templates/login.html',
-            controller: 'loginCtrl',
+            controller: 'LoginCtrl',
             resolve: {
                 skipIfLoggedIn: skipIfLoggedIn
             }
@@ -37,10 +37,18 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
         .state('home', {
             url: '/',
             templateUrl: 'templates/home.html',
-            controller: 'HomeController',
+            controller: 'HomeCtrl',
               resolve: {
                       loginRequired: loginRequired
                     }
-        });
+        })
+        .state('home.DashBoard',{
+            url:' ',
+            templateUrl: 'templates/dash.html',
+            controller: 'DashCtrl',
+              resolve: {
+                      loginRequired: loginRequired
+                    }
+        })
 
 });

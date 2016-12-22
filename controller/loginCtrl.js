@@ -1,4 +1,4 @@
-angular.module('mainApp').controller('loginCtrl', function ($scope, $state,$auth) {
+angular.module('mainApp').controller('LoginCtrl', function ($scope, $state,$auth) {
   //  $scope.formSubmit = function() {
   //     if(LoginService.login($scope.email, $scope.password)) {
   //       $scope.error = '';
