@@ -6,28 +6,34 @@ body.login-page{
 body{
     background-color: white;
 }
+    
+#login-card{
+     width: 300px;
+    height: 396px;
+    border:none;
+    background-color: #D8D1C7 !important;
+}
 .login-box{
  display: inline-block;
     width: 300px;
     height: 396px;
-    margin-top:5%;
-    margin-left:35%;
-    font-family: AppleGothic;
+    max-width:500px;
+    /*margin:-10px;*/
+    /*padding:1em 2em 2em 2em;*/
+    font-family: MyriadPro-Light;
     /*margin-top:5%;*/
 }
-/*@media (max-width: 800px){
+@media only screen and (max-width: 600px){
 
-	.login-box{
-		margin-top:auto;
-    margin-left:10%;
-    margin-right:10%;
-	}*/
-
+	#login-card{
+		margin:5% auto auto 10%;
+	}
+}
 .login-box img {
   /*box-shadow: 1px 1px 1px ;*/
   -webkit-filter: drop-shadow(4px 4px 4px grey);
  /*filter: drop-shadow(5px 5px 5px white);*/
- box-shadow: 10px;
+ /*box-shadow: 10px;*/
   margin-left: 101px;
     margin-right:101px;
 }
@@ -39,13 +45,14 @@ body{
      color:rgba(59, 83, 114, 1);
      border-radius: 10px;
      border:  white;
-     /*box-shadow: 1px 1px 1px 1px;*/
+     box-shadow: 2px 2px 8px 2px gray;
      }
 .login div {
 
     margin-top:19px;
     text-align: center;
     font-size: 28px;
+    font-weight:600;
     
 }
 .login form #input1 {
@@ -63,6 +70,7 @@ body{
 .login form md-input-container label{
     color:rgba(59, 83, 114, 1);
      padding-left:17px !important;
+     font-weight:500 !important;
 }
 .login form #input2{
     height: 35px;
@@ -72,6 +80,8 @@ body{
     color:rgba(59, 83, 114, 1);
 }
 .login form button{
+    margin-top: 8px;
+    border-radius: 5px;
     margin-left:93.5px;
     width:113px;
     height: 41px;
@@ -97,6 +107,150 @@ body{
     .row{
         margin-top:50px;
     }
+    .row ul li{
+    margin-left:50px;
+    display: table-cell;
+}
+}
+@media(min-width:1200px){
+    .row ul li{
+    margin-left:120px;
+    display: table-cell;
+}
+}
+nav{
+    background-color: #D8D1C7 !important; 
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 50%) !important;
+}
+.nav-brand{
+    opacity: 100; 
+    text-align: left; 
+    color: #3B5372; 
+    font-family: Ionicons; 
+    line-height: 0px; 
+    font-size: 24px;
+    font-weight:bold;
+    letter-spacing: 0px;
+}
+.row ul li a{
+    width: 100px; 
+    height: 18px; 
+    opacity: 100; 
+    text-align: left; 
+    color: #3B5372 !important; 
+    font-family: LucidaGrande-Bold;
+    font-weight:bold;
+    line-height: 0px; 
+    font-size: 16px; 
+    letter-spacing: 0px; 
+}
+.date{
+    color: #3B5372 !important; 
+    font-family: Applegothic; 
+   
+    font-size: 16px; 
+    letter-spacing: 0px; 
+}
+#name{
+    color: #3B5372 !important; 
+    font-family: Applegothic; 
+   
+    font-size: 16px; 
+    letter-spacing: 0px; 
+}
+#block{
+    width: 255px; 
+    height: 73px; 
+    opacity: 100; 
+    background-color: #3B5372; 
+}
+.mail{
+    width: 187px; 
+    height: 18px; 
+    opacity: 100; 
+    text-align: left; 
+    color: #D8D1C7; 
+    font-family: AppleGothic; 
+    line-height: 0px; 
+    font-size: 15px; 
+    padding:13px 51px 15px 17px; 
+}
+.logout{
+    width: 54px; 
+    height: 18px; 
+    opacity: 100; 
+    text-align: left; 
+    color: #D8D1C7; 
+    font-family: Ionicons; 
+    line-height: 0px; 
+    font-size: 15px; 
+    letter-spacing: 0px;
+    padding-left:65%; 
+}
+.logout:hover{
+    color: #D8D1C7;
+    text-decoration: none;
 }
 
+
+/*card content*/
+.dash{
+    padding-top:80px;
+}
+.card{
+     border:2px solid rgba(156, 205, 227, 0.99);
+     
+     height: 222px; 
+    border-radius: 3px; 
+    opacity: 100; 
+    background-color: #FFFFFF; 
+    border: solid 2px #9CCDE3; 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 50%); 
+}
+.text {
+    opacity: 100;
+    text-align: left;
+    color: #3B5372;
+    font-family: LucidaGrande-Bold;
+    line-height: 0px;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    padding-top: 17px;
+   
+}
+.text1 {
+    opacity: 100;
+    text-align: center;
+    color: #6FB8D9;
+    font-family: LucidaGrande-Bold;
+    line-height: 0px;
+    font-size: 36px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    padding-top: 30%;
+}
+@media (max-width:760px){
+    .text1{
+         padding-top: 30%;
+    }
+}
+
+.toc{
+    float: right;
+    margin-top: 17px;
+    width: 24px; 
+    height: 24px; 
+}
+
+.toc1 {
+     margin-top: -10px;
+    float: right;
+    width: 24px; 
+    height: 24px; 
+}
+.header{
+    padding-left:19px;
+    padding-right:21px;
+}
 

@@ -43,12 +43,21 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
                     }
         })
         .state('home.DashBoard',{
-            url:' ',
+            url:'dash',
             templateUrl: 'templates/dash.html',
             controller: 'DashCtrl',
               resolve: {
                       loginRequired: loginRequired
                     }
         })
+        .state('home.Engineers',{
+            url:'engineers',
+            templateUrl: 'templates/engineers.html',
+            controller: 'EngCtrl',
+              resolve: {
+                      loginRequired: loginRequired
+                    }
+        })
+
 
 });
