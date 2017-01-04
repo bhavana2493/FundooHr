@@ -11,6 +11,7 @@ angular.module('mainApp').controller('LoginCtrl', function ($scope, $state,$auth
   //   };
   var config = {method: 'POST',url: 'http://192.168.0.171:3000/login'};
   $scope.login = function () {
+    $scope.dataLoading = true;
     $auth.login($scope.user,config)
       .then(function (data) {
 
@@ -19,8 +20,11 @@ angular.module('mainApp').controller('LoginCtrl', function ($scope, $state,$auth
         // $location.path('/');
       })
       .catch(function (error) {
+        $scope.dataLoading = false;
+        document.getElementById("pwd-label").style.color="rgba(236, 13, 13, 1)";
+         document.getElementById("password").style.borderColor="rgba(236, 13, 13, 1)";
         console.log(error.data.message, error.status);
-        $scope.error = "Incorrect email/password !";
+        $scope.error = "Invalid Password or Email Id";
         // toastr.error(error.data.message, error.status);
       });
   };

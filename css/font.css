@@ -4,7 +4,7 @@ src: url('../font/Myriad-Pro-Light_31642 (1).ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
-@font-face {
+/*@font-face {
 font-family: 'LucidaGrande-Bold';
 src: url('../font/lucida-grande-bold.ttf') format('truetype');
 font-weight: bold;
@@ -15,4 +15,4 @@ font-family: 'Applegothic';
 src: url('../font/lucida-grande-bold.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
-}
+}*/

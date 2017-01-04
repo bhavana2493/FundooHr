@@ -1,10 +1,14 @@
 
-body.login-page{
-    background-color: #D8D1C7;
-    background-size:initial;
-}
 body{
     background-color: white;
+    background-size:initial;
+    font-family: MyriadPro-Light;
+}
+#login-page{
+    height:100%;
+    width: inherit;
+    background-color: #D8D1C7;
+    background-size:initial;
 }
     
 #login-card{
@@ -12,22 +16,14 @@ body{
     height: 396px;
     border:none;
     background-color: #D8D1C7 !important;
+    margin:0 auto;
+    padding-top:5%;
 }
 .login-box{
  display: inline-block;
     width: 300px;
     height: 396px;
     max-width:500px;
-    /*margin:-10px;*/
-    /*padding:1em 2em 2em 2em;*/
-    font-family: MyriadPro-Light;
-    /*margin-top:5%;*/
-}
-@media only screen and (max-width: 600px){
-
-	#login-card{
-		margin:5% auto auto 10%;
-	}
 }
 .login-box img {
   /*box-shadow: 1px 1px 1px ;*/
@@ -66,7 +62,14 @@ body{
     border: none;
     border-bottom: 1px solid rgba(59, 83, 114, 1);
 }
+md-input-container:not(.md-input-invalid).md-input-focused label {
+ color: rgba(59, 83, 114, 1);
+ font-size:18px;;
+}
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+   border-bottom: 1px solid rgba(59, 83, 114, 1);
 
+}
 .login form md-input-container label{
     color:rgba(59, 83, 114, 1);
      padding-left:17px !important;
@@ -89,10 +92,17 @@ body{
     
     border:1px solid rgba(59, 83, 114, 1);
 }
+.loader{
+    float:right;
+    margin-right:40px;
+    margin-top:-32px;
+}
+
 .text-danger{
     color:rgba(236, 13, 13, 1);
     font-size: 12px;
 }
+
 .md-raised[disabled]{
     color:rgba(59, 83, 114, 1);
     background-color: rgba(247, 245, 241, 0.82);
@@ -103,60 +113,112 @@ body{
     /*background-color : black;*/
 }
 /*navbar content*/
-@media(min-width:760px){
-    .row{
-        margin-top:50px;
-    }
-    .row ul li{
-    margin-left:50px;
-    display: table-cell;
-}
-}
-@media(min-width:1200px){
-    .row ul li{
-    margin-left:120px;
-    display: table-cell;
-}
-}
+
+
 nav{
     background-color: #D8D1C7 !important; 
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 50%) !important;
+    box-shadow: 1px 1px 3px 1px gray !important;
+}
+
+.navbar-header{
+    margin-top:10px !important;
+    margin-left:5px;
 }
 .nav-brand{
     opacity: 100; 
     text-align: left; 
     color: #3B5372; 
-    font-family: Ionicons; 
     line-height: 0px; 
     font-size: 24px;
     font-weight:bold;
     letter-spacing: 0px;
 }
-.row ul li a{
-    width: 100px; 
-    height: 18px; 
-    opacity: 100; 
-    text-align: left; 
+@media(min-width:768px){
+.nav-brand span{
+float:right;
+margin-top:25px;
+padding-left:15px;
+}
+}
+
+
+/*nav bar active state*/
+#nav-content li.active {
+    background-color: transparent;
+    border-bottom: 2px solid rgba(59, 83, 114, 1);
+    width:115px;
+    vertical-align: middle;
+}
+@media(min-width:768px){
+nav{
+    height:112px !important;
+}
+.navbar-header{
+    margin-left:50px;
+    
+}
+#nav-content li.active {
+    
+    border-bottom: 6px solid rgba(59, 83, 114, 1);
+    border-top:none;
+    width:140px;
+
+}
+}
+ .row ul li{
+     text-align:left;
+}
+@media(min-width:760px){
+    .row{
+        margin-top:74px;
+    }
+    .row ul li{
+    margin-left:20px;
+}
+}
+@media(min-width:970px){
+    .row ul li{
+    margin-left:60px;
+}
+}
+@media(min-width:1200px){
+    .row ul li{
+    margin-left:100px;
+     width:140px;
+     height:40px;
+     text-align:center;
+}
+}
+#top-nav{
+    margin-right:20px;
+    margin-top:10px;
+}
+#nav-content li.active a {
+    background-color:transparent;
+}
+#nav-content li a{
+     
+   width:140px;
+    vertical-align: text-top;
     color: #3B5372 !important; 
-    font-family: LucidaGrande-Bold;
     font-weight:bold;
     line-height: 0px; 
-    font-size: 16px; 
+    font-size: 18px; 
     letter-spacing: 0px; 
 }
 .date{
     color: #3B5372 !important; 
-    font-family: Applegothic; 
    
     font-size: 16px; 
-    letter-spacing: 0px; 
 }
 #name{
     color: #3B5372 !important; 
-    font-family: Applegothic; 
    
     font-size: 16px; 
-    letter-spacing: 0px; 
+
+}
+#name .fullname{
+    padding-left:4px;
 }
 #block{
     width: 255px; 
@@ -169,34 +231,48 @@ nav{
     height: 18px; 
     opacity: 100; 
     text-align: left; 
-    color: #D8D1C7; 
-    font-family: AppleGothic; 
+    color: #D8D1C7;  
     line-height: 0px; 
     font-size: 15px; 
     padding:13px 51px 15px 17px; 
 }
-.logout{
+#logout{
     width: 54px; 
     height: 18px; 
     opacity: 100; 
     text-align: left; 
     color: #D8D1C7; 
-    font-family: Ionicons; 
-    line-height: 0px; 
+    font-weight: 900; 
     font-size: 15px; 
     letter-spacing: 0px;
     padding-left:65%; 
 }
-.logout:hover{
+#logout:hover{
+    background-color: #3B5372; 
     color: #D8D1C7;
     text-decoration: none;
 }
 
 
-/*card content*/
+/*dash card content*/
 .dash{
+    padding-top:60px;
+}
+#column{
+    padding-top:30px;
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+.dash{
+    padding-top:20px;
+}
+#column{
     padding-top:80px;
 }
+}
+
 .card{
      border:2px solid rgba(156, 205, 227, 0.99);
      
@@ -211,7 +287,6 @@ nav{
     opacity: 100;
     text-align: left;
     color: #3B5372;
-    font-family: LucidaGrande-Bold;
     line-height: 0px;
     font-size: 18px;
     letter-spacing: 0px;
@@ -223,14 +298,18 @@ nav{
     opacity: 100;
     text-align: center;
     color: #6FB8D9;
-    font-family: LucidaGrande-Bold;
     line-height: 0px;
     font-size: 36px;
     letter-spacing: 0px;
     font-weight: bold;
     padding-top: 30%;
 }
-@media (max-width:760px){
+@media (max-width:990px){
+    .text1{
+         padding-top: 15%;
+    }
+}
+@media (max-width:500px){
     .text1{
          padding-top: 30%;
     }
@@ -253,4 +332,147 @@ nav{
     padding-left:19px;
     padding-right:21px;
 }
+/*search button*/
 
+#search{
+    height: 34px !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+        
+    }
+    #eng{
+        padding-top:50px;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+}
+@media screen and (max-width: 767px) {
+#eng{
+    padding-top:70px;  
+}
+}
+/*profile display*/
+.profile{
+    max-width:1500px;
+    list-style:none;
+    float:left;
+    padding-top:15px;
+}
+
+/*alphabetical scroll*/
+.anchor{
+    /*float:right;*/
+    right:20px;
+    width:18px;
+    height:480px;
+    position: fixed;
+    padding-top:0px;
+    cursor: pointer;
+
+
+}
+.alphabets{
+    list-style: none;
+    font-size: 15px;
+    padding-left:0px;
+    line-height: 11px;
+}
+.alphabets li a.active{
+    color: #4A5E77;
+    font-size: 15px; 
+}
+
+.alphabets li a:hover 
+{
+    text-decoration:none;
+     color: #4A5E77;
+     font-size: 15px;
+      
+}
+.alphabets li a:focus:hover {
+  color: #4A5E77;
+}
+
+.alphabets li a{
+    color: #D8D1C7; 
+}
+/*card content of profile*/
+#info-card {
+    width: 270px; 
+    height: 112px; 
+    cursor: pointer;
+    border-radius: 3px; 
+    opacity: 100; 
+    background-color: #F0EDEA; 
+    box-shadow: 1px 1px 5px 0px gray;
+    border:#F0EDEA;
+}
+#info-card:hover{
+    box-shadow: 1px 1px 5px 1px gray;
+}
+#card-col{
+    box-sizing:border-box;
+	display: inline-block;
+	position: relative;
+    margin: 0 15px 15px 0;
+}
+@media(max-width:991px)
+and (min-device-width : 730px){
+    #card-col{
+    margin-left:40px;
+    }
+}
+.profile-photo img{
+    width:102px;
+    height: 99px;
+    margin:6px 0px 0px 6px;
+}
+.profile-info{
+    float:right;
+    margin:6px 10px 0px 0px;
+    width:145px;
+    color: #3B5372; 
+    font-size: 14px; 
+}
+.profile-info .empname{
+    font-weight:600;  
+    font-size: 15px; 
+}
+.profile-info .email{
+    font-size: 12px;
+}

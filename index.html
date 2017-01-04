@@ -2,7 +2,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
 	<meta charset="utf-8">
     <title> FundooHr </title>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
@@ -26,10 +26,9 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/satellizer/dist/satellizer.js"></script>
 </head>
-<body ng-app="mainApp" class="{{bodyClass}} foo bar" ng-controller="GlobalCtrl">
+<body ng-app="mainApp">
 
 <ui-view></ui-view>
-
 <script src="app.js"></script>
 <script src="controller/loginCtrl.js"></script>
 <script src="controller/homectrl.js"></script>
@@ -37,6 +36,10 @@
 <script src="controller/globalctrl.js"></script>
 <script src="controller/DashCtrl.js"></script>
 <script src="controller/EngCtrl.js"></script>
+<script src="services/myservice.js"></script>
+<script src="services/sort.js"></script>
+<script src="directives/cardInfo.js"></script>
+<script src="js/scroll.js"></script>
 
 </body>
 </html>

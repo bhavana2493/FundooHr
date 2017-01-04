@@ -1,6 +1,6 @@
-
+<div class="container">
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  
 
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -21,17 +21,17 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="date"><span class="glyphicon glyphicon-time">{{ today | date : "dd,MMMM y" }}</span>  </a>
+      <ul class="nav navbar-nav navbar-right" id="top-nav">
+        <li><a class="date"><span class="glyphicon glyphicon-time"></span> <span>{{ today | date : "dd,MMMM y" }} </span> </a>
        </li>
         <li class="dropdown">
           <a class="dropdown-toggle name" data-toggle="dropdown" id="name" >
-           <img src="images/user.png" width="20px" height="20px" />{{name}}
+           <img src="images/user.png" width="20px" height="20px"/><span class="fullname">{{name}}</span>
             <span class="caret"></span></a>
           <ul class="dropdown-menu" id="block">
                 <li class="mail">bhavana4339@gmail.com</li>
             <li ng-if="isAuth()">
-              <a ui-sref="logout" class="logout"><img src="images/logout.png" width="12px" height="14px"/>logout</a>
+              <a ui-sref="logout" id="logout"><img src="images/logout web.png" width="12px" height="14px"/><b> Logout</b></a>
               </li>
 
           </ul>
@@ -39,9 +39,9 @@
       </ul>
       <div class="row">
 
-      <ul class="nav navbar-nav ">
-        <li class="active"><a ui-sref=".DashBoard">DashBoards</a></li>
-        <li><a ui-sref=".Engineers">Engineers</a></li>
+      <ul class="nav navbar-nav " id="nav-content">
+        <li ng-class="{active: isActive('/dash')}"><a ui-sref=".DashBoard">DashBoards</a></li>
+        <li ng-class="{active: isActive('/engineers')}"><a ui-sref=".Engineers">Engineers</a></li>
         <li><a ui-sref="Attendence">Attendence</a></li>
         <li><a ui-sref="Clients">Clients</a></li>
         <li><a ui-sref="Reports">Reports</a></li>
@@ -50,7 +50,8 @@
     </div>
 
   <!-- /.navbar-collapse -->
-  </div>
+  
   <!-- /.container-fluid -->
 </nav>
 <ui-view></ui-view>
+</div>
