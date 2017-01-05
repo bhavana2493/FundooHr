@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Search" />
+                <input type="text" class="form-control" placeholder="Search" ng-model="search"/>
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg">
@@ -43,15 +43,15 @@
         <!--<ul class="alphabets">
         <li ng-repeat="(k,v) in profile" ><a class="active">{{k}}</a></li>
     </ul>-->
-        <ul class="alphabets" ng-repeat="x in alphabet">
+        <ul class="alphabets" ng-repeat="x in alphabet ">
             <li><a ng-click="scrollTo(x)" class="{{x}}" >{{x}}</a></li>
         </ul>
     </div>
     <div class="profile">
         <section ng-repeat="(k,v) in profile" id="{{k}}">
             <!--class="col-lg-3 col-sm-6 col-md-4 col-xs-12 " -->
-            <div ng-repeat="(key,info) in v" id="card-col">
-            <card-info data="info" ></card-info>
+            <div ng-repeat="(key,info) in v  | filter:search" id="card-col">
+            <card-info data="info " ></card-info>
             </div>
         </section>
     </div>
