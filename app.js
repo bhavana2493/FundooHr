@@ -1,4 +1,5 @@
-var mainApp = angular.module("mainApp", ['ui.router', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessages', 'satellizer','toastr']);
+var mainApp = angular.module("mainApp", ['ui.router', 'ngMaterial','LocalStorageModule',
+                                         'satellizer','toastr']);
 mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $authProvider) {
     var skipIfLoggedIn = ['$q', '$auth', function ($q, $auth) {
         var deferred = $q.defer();
@@ -24,7 +25,7 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
         .state('login', {
             url: '/login',
             templateUrl: 'templates/login.html',
-            controller: 'LoginCtrl',
+            controller: 'loginCtrl',
             resolve: {
                 skipIfLoggedIn: skipIfLoggedIn
             }
@@ -32,12 +33,12 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
         .state('logout', {
             url: '/logout',
             template: null,
-            controller: 'LogoutCtrl'
+            controller: 'logoutCtrl'
         })
         .state('home', {
             url: '/',
             templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl',
+            controller: 'homeCtrl',
               resolve: {
                       loginRequired: loginRequired
                     }
@@ -45,7 +46,7 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
         .state('home.DashBoard',{
             url:'dash',
             templateUrl: 'templates/dash.html',
-            controller: 'DashCtrl',
+            controller: 'dashCtrl',
               resolve: {
                       loginRequired: loginRequired
                     }
@@ -53,7 +54,7 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
         .state('home.Engineers',{
             url:'engineers',
             templateUrl: 'templates/engineers.html',
-            controller: 'EngCtrl',
+            controller: 'engCtrl',
               resolve: {
                       loginRequired: loginRequired
                     }
