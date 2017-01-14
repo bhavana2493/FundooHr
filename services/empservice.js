@@ -1,46 +1,69 @@
-angular.module('mainApp').factory('empService', function ($http, $log, $q,sortService,localStorageService) {
+angular.module('mainApp').service('empService', function () {
 
-  return {
-    getdata: function () {
-      var deferred = $q.defer();
-      // $http.get('/home/bridgeit/Desktop/employee.json');
-        // var akey=localStorage.getItem('satellizer_token');
-        var token;
-        localStorageService.get(token);
-        // http call for fetching data..
-          $http({
-        "method": "GET",
-        "url": "http://192.168.0.171:3000/searchEmployeeByName",
-        "data": { token:"1a285sdffd8do8fd" }
-      }).then(function (data) {
-        //for sorting data....
-            var new_data=sortService.sorting(data);
-            //sending data...
-            deferred.resolve(new_data);
-        }),function (msg, code) {
-          deferred.reject(msg);
+  /*
+  *Sorting data according to alphabetical order by name
+  */
+  this.sorting = function (data) {
+    dataAll = data.data.employeeList;
+    // points.sort(function(a, b){return a-b});
+    //dataAll  sortBy employeename
+    dataAll.sort(function (a, b) {
+      var nameA = a.employeeName.toUpperCase(); // ignore upper and lowercase
+      var nameB = b.employeeName.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      // names must be equal
+      return 0;
+    });
+    // console.log(dataAll);
 
-          $log.error(msg, code);
-        };
-      return deferred.promise;
-    },
-    createSection :function(dataAll){
-             //changing json format
-       //according to name data is stored...
-        var profile={};
-        dataAll.forEach(function(element) {
-            // console.log(element);
-            var name=element.employeeName.toUpperCase();
-            // console.log(name);
-            var id=name.charAt(0);
-            if(!(profile[id]&&profile[id].length)){
-                profile[id]=[];
-            }
-            profile[id].push(element);
-        });
-         console.log(profile);
-         return profile;
+    return dataAll;
+  }
+
+  /*
+  *Creating section according to alphabetical order
+  */
+  this.createSection = function (dataAll) {
+    //changing json format
+    //according to name data is stored...
+    var profile = {};
+    dataAll.forEach(function (element) {
+      // console.log(element);
+      var name = element.employeeName.toUpperCase();
+      // console.log(name);
+      var id = name.charAt(0);
+      if (!(profile[id] && profile[id].length)) {
+        profile[id] = [];
+      }
+      profile[id].push(element);
+    });
+    console.log(profile);
+    return profile;
+  }
+
+  /*
+  *Filltering profile According data obtained from Search Form
+  */
+  this.filltering = function (data, filters) {
+    var results = data;
+    for (var key in filters) {
+      var profile = results;
+      if (filters[key] != "") {
+        results = [];
+        profile.forEach(function (element) {
+          if (element[key].toUpperCase() == filters[key].toUpperCase()) {
+            results.push(element);
+          }
+        })
+      }
     }
+    console.log(results);
+    return results;
+
   }
 
 });

@@ -48,11 +48,13 @@
         </div>
         <section ng-repeat="(k,v) in profile" id="{{k}}">
             <div class="row" id="section-row">
-                <div class="col-sm-6 col-lg-4 col-md-6 col-xs-12 " ng-repeat="(key,info) in v  | filter:search" id="card-col">
+                <div ng-repeat="(key,info) in v  | filter:search" id="card-col">
                     <card-info data="info "></card-info>
                 </div>
             </div>
+            <!--end of row-->
         </section>
+        <!--end of section-->
     </div>
     <!--Display Error-->
     <div class="error" ng-if="errorpage">

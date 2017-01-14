@@ -19,16 +19,16 @@
 <body ng-app="mainApp">
 
 <!--dependency used in project-->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
-    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js" charset="utf-8"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js" charset="utf-8"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
-    <script src="bower_components/satellizer/dist/satellizer.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="bower_components/satellizer/dist/satellizer.min.js"></script>
 
     <ui-view></ui-view>
 
@@ -44,9 +44,8 @@
     <script src="controller/engCtrl.js"></script>
 
     <!--services-->
+    <script src="services/restservice.js"></script>
     <script src="services/empservice.js"></script>
-    <script src="services/sort.js"></script>
-    <script src="services/formFilters.js"></script>
 
     <!--directives-->
     <script src="directives/cardInfo.js"></script>

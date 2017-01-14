@@ -3,6 +3,7 @@ body{
     background-color: white;
     background-size:initial;
     font-family: MyriadPro-Light;
+    height:100%;
 }
 #login-page{
     height:100%;
@@ -48,7 +49,6 @@ body{
     margin-top:19px;
     text-align: center;
     font-size: 28px;
-    font-weight:600;
     
 }
 .login form #input1 {
@@ -59,6 +59,7 @@ body{
     color:rgba(59, 83, 114, 1);
 }
 .login form md-input-container input{
+    font-size: 15px;
     border: none;
     border-bottom: 1px solid rgba(59, 83, 114, 1);
     color:rgba(59, 83, 114, 1);
@@ -112,7 +113,6 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
 .md-raised{
     color:rgba(255, 255, 255, 1);
     background-color: rgba(59, 83, 114, 1);
-    /*background-color : black;*/
 }
 /*navbar content*/
 
@@ -169,6 +169,7 @@ nav{
 }
 }
  .row ul {
+     font-family: Headlines;  
     text-align:left;
     }
 @media(max-width:759px){
@@ -461,14 +462,14 @@ and (max-device-width : 1024px) {
 }
 @media screen and (max-width: 767px) {
 #eng{
-    padding-top:79px;  
+    padding-top:90px;  
 }
 }
 /*profile display*/
 .profile{
     list-style:none;
     float:left;
-    padding-top:15px;
+    padding-top:40px;
 }
 
 /*alphabetical scroll*/
@@ -491,9 +492,13 @@ and (max-device-width : 1024px) {
 }
 @media(max-width:760px){
     .anchor{
-    padding-top:15px;
+    padding-top:25px;
+    }
+    .profile{
+    padding-top:25px;
     }
 }
+
 .alphabets li a.active{
     color: #4A5E77;
     font-size: 15px; 
@@ -532,16 +537,19 @@ and (max-device-width : 1024px) {
 	display: inline-block;
 	position: relative;
     margin-bottom:30px;
+    padding-left:40px;
 }
 #section-row{
     margin-top:0px !important;
 }
 
-.profile-photo img{
+.profile-photo img {
+    float:left;
     width:102px;
     height: 99px;
     margin:6px 0px 0px 6px;
 }
+
 .profile-info{
     float:right;
     margin:6px 10px 0px 0px;
@@ -589,9 +597,10 @@ and (max-device-width : 1024px) {
     bottom: 0;
 }
 .error{
-    color:#3B5372;
+    color:gray;
     font-size: 30px;
     text-align:center;
+    text-shadow: 2px 2px wheat;
     margin:15%;
 
 

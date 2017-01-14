@@ -1,11 +1,9 @@
 $(document).ready(function () {
-
- 
 $(window).on('scroll', function () {
   var cur_pos = $(this).scrollTop();
   //console.log(cur_pos);
  $('section').each(function() {
-    var top = $(this).offset().top-250,
+    var top = $(this).offset().top-200,
         bottom = top + $(this).outerHeight();
           
     if (cur_pos >= top && cur_pos <= bottom) {
