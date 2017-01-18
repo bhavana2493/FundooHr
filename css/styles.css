@@ -95,14 +95,10 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
     
     border:1px solid rgba(59, 83, 114, 1);
 }
-.loader{
-    float:right;
-    margin-right:40px;
-    margin-top:-32px;
-}
 
 .text-danger{
-    color:rgba(236, 13, 13, 1);
+    color:rgba(236, 13, 13, 1) !important;
+    margin-left: 70px;
     font-size: 12px;
 }
 
@@ -249,6 +245,13 @@ nav{
 .navbar-default .navbar-nav>.open>a:focus, 
 .navbar-default .navbar-nav>.open>a:hover{
     background-color: #D8D1C7 !important;
+}
+.container.open {
+    transition: 0.5s;
+  padding-top: 350px;
+}
+.container {
+    transition: 0.8s;
 }
 .date{
     color: #3B5372 !important; 
@@ -478,11 +481,13 @@ and (max-device-width : 1024px) {
     right:15px;
     width:18px;
     height:480px;
-    position: fixed;
-    padding-top:0px;
+    position: absolute;
+    padding-top:40px;
     cursor: pointer;
-
-
+}
+.anchor.stick {
+    position: fixed;
+    top:75px;
 }
 .alphabets{
     list-style: none;
@@ -556,6 +561,11 @@ and (max-device-width : 1024px) {
     width:190px;
     color: #3B5372; 
     font-size: 14px; 
+}
+.profile-info li{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .profile-info .empname{
     font-weight:600;

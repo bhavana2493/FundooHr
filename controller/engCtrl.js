@@ -7,8 +7,7 @@ angular.module('mainApp').controller('engCtrl', function ($scope, empService, $s
     var data;
     $scope.dataLoading = true;
     //calling empService for data...
-    var token;
-    localStorageService.get(token);
+    var token=localStorageService.get('token');     
     var query = { token: "1a285sdffd8do8fd" };
     var promise = restService.getRequest('searchEmployeeByName', query)
     promise.then(function (data) {

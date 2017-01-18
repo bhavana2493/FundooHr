@@ -49,16 +49,15 @@
         <section ng-repeat="(k,v) in profile" id="{{k}}">
             <div class="row" id="section-row">
                 <div ng-repeat="(key,info) in v  | filter:search" id="card-col">
-                    <card-info data="info "></card-info>
+                    <card-info data="info"></card-info>
                 </div>
             </div>
             <!--end of row-->
         </section>
         <!--end of section-->
+        <!--Display Error-->
+        <div class="error" ng-if="errorpage">
+            <span> Not Found !!!!!</span>
+        </div>
     </div>
-    <!--Display Error-->
-    <div class="error" ng-if="errorpage">
-        <span> Not Found !!!!!</span>
-    </div>
-
 </div>

@@ -1,14 +1,15 @@
 // restServices rest call with baseurl
 angular.module('mainApp').service('restService', function ($http, $log, $q) {
-    var baseUrl = "http://192.168.0.171:3000/";
+    var baseUrl = "http://192.168.0.118:3000/";
     //    function for GET
     this.getRequest = function (path, query) {
         
         var deferred = $q.defer();
+        // console.log(query)
         $http({
-            "method": "GET",
-            "url": baseUrl + path,
-            "data": query
+            method: "GET",
+            url: baseUrl + path,
+            params: query
             // "url": "employee.json"
         }).then(function (data) {
             //sending data...

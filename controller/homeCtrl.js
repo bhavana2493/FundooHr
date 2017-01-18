@@ -8,4 +8,7 @@ angular.module('mainApp').controller('homeCtrl', function ($scope, $location, $s
   $scope.isActive = function(destination) {
         return destination === $location.path();
     }
+  $("#navbar-toggle").click(function() {
+  $(".container" ).toggleClass( "open");
+});
 });
