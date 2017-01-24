@@ -20,7 +20,7 @@ mainApp.config( function ($stateProvider, $urlRouterProvider, $httpProvider, $au
         }
         return deferred.promise;
     }];
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/dash');
     $stateProvider
         .state('login', {
             url: '/login',

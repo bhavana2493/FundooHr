@@ -1,58 +1,57 @@
-<div class="dash">
+<div class="dash" ng-init="dashPage()">
     <div class="row">
         <!-- Card Projects -->
-  <div class="col-sm-6  col-md-4 col-xs-12" id="column" ng-repeat="(key,value) in dashData" ng-if="key!=='timeStamp'">
-            <div class="card" >
+        <!--{{dashData}}-->
+        <div class="col-sm-6  col-md-4 col-xs-12" id="column" ng-repeat="(key,value) in dashData" ng-if="key!=='timeStamp'">
+            <div class="card" id="key">
                 <div class="header">
-                    <h4 class="text" >{{key}}
-                     <span class="card-action"><a target="new_blank"><img class="toc1" src="images/summary.png"/></img></a></span></h4>
+                    <h4 class="text">{{split(key)}}
+                        <span class="card-action"><a ><img class="toc1" src="images/summary.png"/>
+                        </img></a>
+                        <span class="tooltiptext">view {{split(key)}} </span>
+                        </span>
+                    </h4>
                 </div>
-            </div>
-        </div>
-  <!--<div class="col-sm-6  col-md-4 col-xs-12" id="column">
-            <div class="card">
-                <div class="header">
-                    <h4 class="text">Attendance Fallout
-                     <span class="card-action"><a target="new_blank"><img class="toc1" src="images/summary.png"/></img></a></span></h4>
+                <div ng-if="key=='attendanceSummary'" id="dash-attendanceSummary">
+                    <div id="dashMark">
+                        <div id="dashMarked">
+                            <div id="gcircle">{{value.marked}}</div>
+                            <div id="marked">Marked</div>
+                        </div>
+                        <div id="dashUnmarked">
+                            <div id="rcircle">{{value.unmarked}}</div>
+                            <div id="unmarked">Unmarked</div>
+                        </div>
+                    </div>
+                    <div class="aSummary-date">{{previous|date:" dd MMMM yyyy"}}</div>
                 </div>
-            </div>
-        </div>
-  <div class="col-sm-6  col-md-4 col-xs-12" id="column">
-            <div class="card">
-                <div class="header">
-                    <h4 class="text">Leave Summary
-                     <span class="card-action"><a target="new_blank"><img class="toc1" src="images/summary.png"/></img></a></span></h4>
+                <div ng-if="key=='attendanceFallout'" id="dash-attendanceFallout">
+                    <center>
+                        <div id="falloutEmp">{{value.falloutEmployee}}</div>
+                        <div id="totalEmp">out of {{value.totalEmployee}}</div>
+                        <div class="aFallout-date">{{previous|date:" MMMM yyyy"}}</div>
+                    </center>
                 </div>
-            </div>
-        </div>-->
-
-        <!-- Card Projects -->
-  <div class="col-sm-6  col-md-4 col-xs-12" id="column">
-            <div class="card">
-                 <div class="header">
-                    <span ><a class="card-action" ui-sref="home.Engineers">
-                        <img class="toc" src="images/summary.png"/></a></span>
-                        <h4 class="text1">Engineers</h4><span>
-                 </div>
-            </div>
-        </div>
-  <div class="col-sm-6  col-md-4 col-xs-12" id="column">
-            <div class="card">
-                <div class="header">
-                   <span ><a class="card-action" ui-sref="home.Engineers">
-                        <img class="toc" src="images/summary.png"/></a></span>
-                        <h4 class="text1">Clients</h4><span>
-                 </div>
-            </div>
-        </div>
-  <div class="col-sm-6  col-md-4 col-xs-12" id="column">
-            <div class="card">
-                <div class="header">
-                    <span ><a class="card-action" ui-sref="home.Engineers">
-                        <img class="toc" src="images/summary.png"/></a></span>
-                        <h4 class="text1">Reports</h4><span>
-                 </div>
+                 <div ng-if="key=='leaveSummary'" id="dash-leaveSummary">
+                    <center>
+                        <div id="empLeave">{{value.leave}}</div>
+                        <div id="uptilLeave">uptil</div>
+                        <div class="lSummary-date">{{previous|date:"dd MMMM yyyy"}}</div>
+                    </center>
+                </div>
             </div>
         </div>
 
+        <!-- Card Projects -->
+        <div class="col-sm-6  col-md-4 col-xs-12" id="column" ng-repeat="x in dashBoardData">
+            <div class="card">
+                <div class="header">
+                    <span class="card-action"><a ui-sref="home.Engineers">
+                        <img class="toc" src="images/summary.png"> </img></a>
+                        <span class="tooltiptext">view {{x}} </span>
+                        </span>
+                 </div>
+                 <div class="text1">{{x}}</div>
+            </div>
+        </div>
 </div>

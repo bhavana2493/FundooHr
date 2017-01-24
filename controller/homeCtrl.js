@@ -4,7 +4,6 @@ angular.module('mainApp').controller('homeCtrl', function ($scope, $location, $s
   };
   $scope.today = new Date();
   $scope.name = "Bhavana";
-  $state.go('home.DashBoard')
   $scope.isActive = function(destination) {
         return destination === $location.path();
     }

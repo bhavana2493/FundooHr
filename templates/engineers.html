@@ -1,4 +1,4 @@
-<div id="eng">
+<div id="eng" ng-init="engPage()">
     <div class="row">
         <div class="col-md-12">
             <div class="input-group" id="adv-search">
@@ -7,7 +7,7 @@
                     <div class="btn-group" role="group">
                         <div class="dropdown dropdown-lg">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="search"><span class="caret"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                            <div class="dropdown-menu dropdown-menu-right" role="menu" id="filter_menu">
                                 <form class="form-horizontal" role="form" ng-submit="filterData()">
                                     <div class="form-group">
                                         <label>Name</label>
@@ -21,11 +21,11 @@
                                         <label>Status</label>
                                         <input class="form-control" type="text" ng-model="filters.employeeStatus" />
                                     </div>
-                                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" ></span></button>
+                                    <button type="submit" class="btn btn-primary" data-toggle="dropdown"><span class="glyphicon glyphicon-search" ></span></button>
                                 </form>
                             </div>
                         </div>
-                        <div class="btn btn-primary" ng-disabled="disabled" aria-disabled="true"><span class="glyphicon glyphicon-search" id="search-symbol"></span></div>
+                        <div class="btn btn-primary" ng-disabled="disabled" aria-disabled="true" ><span class="glyphicon glyphicon-search" id="search-symbol"></span></div>
                     </div>
                 </div>
             </div>

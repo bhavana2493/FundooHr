@@ -1,6 +1,6 @@
 // restServices rest call with baseurl
 angular.module('mainApp').service('restService', function ($http, $log, $q) {
-    var baseUrl = "http://192.168.0.118:3000/";
+    var baseUrl = "http://192.168.0.17:3000/";
     //    function for GET
     this.getRequest = function (path, query) {
         
@@ -21,18 +21,5 @@ angular.module('mainApp').service('restService', function ($http, $log, $q) {
         };
         return deferred.promise;
     };
-    // //  function to POST
-    //     this.postRequest = function (path, data, cb) {
-
-    //         var postR = $http.post(baseUrl + path, data).success(function (data) {
-
-    //             cb(data, null);
-
-    //         }).error(function (err) {
-    //             alert('Sorry!! something went wrong....');
-    //             cb(null, err);
-    //         });
-    //         return postR;
-    //     };
 
 });

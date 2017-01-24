@@ -20,15 +20,13 @@ $(document).ready(function () {
    * page is scrolled/
    */
   $(window).scroll(function () {
-    var window_top = $(window).scrollTop() + 75; 
+    var window_top = $(window).scrollTop() + 75;
     var div_top = $('.display').offset().top;
     if (window_top > div_top) {
       $('.anchor').addClass('stick');
     } else {
-  console.log("removing stick")
+      console.log("removing stick")
       $('.anchor').removeClass('stick');
     }
   });
-
-
 });

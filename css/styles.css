@@ -4,6 +4,10 @@ body{
     background-size:initial;
     font-family: MyriadPro-Light;
     height:100%;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
 }
 #login-page{
     height:100%;
@@ -27,10 +31,7 @@ body{
     max-width:500px;
 }
 .login-box img {
-  /*box-shadow: 1px 1px 1px ;*/
-  -webkit-filter: drop-shadow(4px 4px 4px grey);
- /*filter: drop-shadow(5px 5px 5px white);*/
- /*box-shadow: 10px;*/
+  filter: drop-shadow(4px 4px 4px grey);
   margin-left: 101px;
     margin-right:101px;
 }
@@ -142,12 +143,12 @@ padding-left:15px;
 
 
 /*nav bar active state*/
-#nav-content li.active {
+/*#nav-content li.active {
     background-color: transparent;
     border-bottom: 2px solid rgba(59, 83, 114, 1);
     width:115px;
     vertical-align: middle;
-}
+}*/
 @media(min-width:768px){
 nav{
     height:112px !important;
@@ -157,11 +158,12 @@ nav{
     
 }
 #nav-content li.active {
-    
-    border-bottom: 4px solid rgba(59, 83, 114, 1);
+    display: inline-block;
+    border-bottom: 3px solid rgba(59, 83, 114, 1);
     border-top:none;
     width:140px;
-
+    transform:  scaleX(1.2);
+    transition: transform .2s ease;
 }
 }
  .row ul {
@@ -308,7 +310,7 @@ nav{
 #column{
     padding-top:30px;
 }
-/* iPads (portrait and landscape) ----------- */
+ /*iPads (portrait and landscape) ----------- 
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
@@ -318,11 +320,10 @@ and (max-device-width : 1024px) {
 #column{
     padding-top:80px;
 }
-}
+}*/
 .dash .row #column .card{
-     border:2px solid rgba(156, 205, 227, 0.99);
-     
-     height: 222px; 
+    border:2px solid rgba(156, 205, 227, 0.99);
+    height: 222px; 
     border-radius: 3px; 
     opacity: 100; 
     background-color: #FFFFFF; 
@@ -348,21 +349,13 @@ and (max-device-width : 1024px) {
     opacity: 100;
     text-align: center;
     color: #6FB8D9;
-    line-height: 0px;
+    line-height: 100%;
     font-size: 36px;
     letter-spacing: 0px;
     font-weight: bold;
-    padding-top: 30%;
-}
-@media (max-width:990px){
-    .text1{
-         padding-top: 15%;
-    }
-}
-@media (max-width:500px){
-    .text1{
-         padding-top: 30%;
-    }
+    vertical-align: middle;
+    height:100%;
+    margin-top: 95px;
 }
 
 .toc{
@@ -381,6 +374,129 @@ and (max-device-width : 1024px) {
 .header{
     padding-left:19px;
     padding-right:21px;
+}
+#gcircle{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(24, 136, 13, 1);
+    border-radius: 50%;
+    text-align: -webkit-center;
+    vertical-align: middle;
+    line-height: 35px;
+    margin-left:15%;
+    font-size: 18px;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 1);
+}
+#marked{
+    line-height: 1.3;
+    font-size: 18px;
+    color: rgba(24, 136, 13, 1);
+}
+#rcircle{
+    width: 35px;
+    height: 35px;
+    background-color: rgba(227, 86, 86, 1);
+    border-radius: 50%;
+    text-align: -webkit-center;
+    vertical-align: middle;
+    line-height: 35px;
+    margin-left:30%;
+    font-size: 18px;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 1);
+
+}
+#unmarked{
+    line-height:1.3;
+    font-size: 18px;
+    color: rgba(227, 86, 86, 1);
+}
+#dash-attendanceSummary{
+    margin:50px 53px 0px 22%;
+
+    }
+#dashMark{
+    line-height: 0;
+    width: 187px; 
+    height: 59px;      
+}
+#dashMarked{
+    width: 67px;
+    float:left;
+}
+#dashUnmarked{
+    float:right;
+}
+.aSummary-date{
+    opacity: 1;  
+    text-align: left; 
+    color: #6FB8D9;
+    margin:35px 0 0 18px; 
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+#dash-attendanceFallout{
+     margin:30px;
+}
+#falloutEmp{
+    width: 75px; 
+    height: 78px;
+    font-size:64px;
+    color: rgba(227, 86, 86, 1); 
+}
+#totalEmp{
+    font-size:14px;
+    color: rgba(227, 86, 86, 1);
+}
+.aFallout-date{
+    color: #6FB8D9;
+    margin:18px; 
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+#dash-leaveSummary{
+     margin:30px;
+}
+#empLeave{
+    width: 75px; 
+    height: 78px;
+    font-size:64px;
+    color: rgba(227, 86, 86, 1); 
+}
+#uptilLeave{
+    font-size:14px;
+    color: #6FB8D9;
+}
+.lSummary-date{
+    color: #6FB8D9;
+    margin:18px; 
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.card-action .tooltiptext {
+    visibility: hidden;
+    width: 162px; 
+    height: 27px; 
+    background-color: rgba(4, 4, 4, 0.59);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    border-radius: 6px;
+    margin:10px;
+    padding: 5px 0;
+    font-size:12px;
+    vertical-align: middle;
+    line-height: 15px;
+    margin-left:100px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+.card-action:hover .tooltiptext {
+    visibility: visible;
 }
 /*search button*/
 
