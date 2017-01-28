@@ -1,5 +1,6 @@
 <div id="eng" ng-init="engPage()">
     <div class="row">
+        <!--search box-->
         <div class="col-md-12">
             <div class="input-group" id="adv-search">
                 <input type="text" class="form-control" placeholder="Search" ng-model="search" />
@@ -8,7 +9,7 @@
                         <div class="dropdown dropdown-lg">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="search"><span class="caret"></span></button>
                             <div class="dropdown-menu dropdown-menu-right" role="menu" id="filter_menu">
-                                <form class="form-horizontal" role="form" ng-submit="filterData()">
+                                <form class="form-horizontal" role="form" ng-submit="filterFormData()">
                                     <div class="form-group">
                                         <label>Name</label>
                                         <input class="form-control" type="text" ng-model="filters.employeeName" />
@@ -21,7 +22,7 @@
                                         <label>Status</label>
                                         <input class="form-control" type="text" ng-model="filters.employeeStatus" />
                                     </div>
-                                    <button type="submit" class="btn btn-primary" data-toggle="dropdown"><span class="glyphicon glyphicon-search" ></span></button>
+                                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" ></span></button>
                                 </form>
                             </div>
                         </div>
@@ -30,6 +31,7 @@
                 </div>
             </div>
         </div>
+        <!--end of search box-->
     </div>
 </div>
 <div class="display">
@@ -46,7 +48,7 @@
         <div class="loader-eng">
             <img ng-if="dataLoading" src="images/loader.gif" width="50px" height="50px" />
         </div>
-        <section ng-repeat="(k,v) in profile" id="{{k}}">
+        <section ng-repeat="(k,v) in profile track by $index" id="{{k}}">
             <div class="row" id="section-row">
                 <div ng-repeat="(key,info) in v  | filter:search" id="card-col">
                     <card-info data="info"></card-info>

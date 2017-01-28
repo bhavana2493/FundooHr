@@ -1,7 +1,5 @@
 
 body{
-    background-color: white;
-    background-size:initial;
     font-family: MyriadPro-Light;
     height:100%;
     top:0;
@@ -11,11 +9,12 @@ body{
 }
 #login-page{
     height:100%;
-    width: inherit;
+    width: 100%;
     background-color: #D8D1C7;
     background-size:initial;
+    position:fixed;
 }
-    
+
 #login-card{
      width: 300px;
     height: 396px;
@@ -50,7 +49,7 @@ body{
     margin-top:19px;
     text-align: center;
     font-size: 28px;
-    
+
 }
 .login form #input1 {
     height:50px;
@@ -93,7 +92,7 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
     width:113px;
     height: 41px;
     font-size: 18px;
-    
+
     border:1px solid rgba(59, 83, 114, 1);
 }
 
@@ -115,7 +114,7 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
 
 
 nav{
-    background-color: #D8D1C7 !important; 
+    background-color: #D8D1C7 !important;
     box-shadow: 1px 1px 3px 1px gray !important;
 }
 
@@ -124,10 +123,10 @@ nav{
     margin-left:5px;
 }
 .nav-brand{
-    opacity: 100; 
-    text-align: left; 
-    color: #3B5372; 
-    line-height: 0px; 
+    opacity: 100;
+    text-align: left;
+    color: #3B5372;
+    line-height: 0px;
     font-size: 24px;
     font-family: Headlines;
     font-weight:bold;
@@ -155,7 +154,7 @@ nav{
 }
 .navbar-header{
     margin-left:50px;
-    
+
 }
 #nav-content li.active {
     display: inline-block;
@@ -167,7 +166,7 @@ nav{
 }
 }
  .row ul {
-     font-family: Headlines;  
+     font-family: Headlines;
     text-align:left;
     }
 @media(max-width:759px){
@@ -178,7 +177,7 @@ nav{
         margin-top:10px;
         vertical-align: text-middle;
     }
-    
+
 #nav-content li a{
     padding-top:20px;
 }
@@ -188,7 +187,7 @@ nav{
 #nav-content li.active {
     background-color: rgba(247, 245, 241, 0.82);
     border:none;
-    
+
 }
 #bs-example-navbar-collapse-1{
     min-height:360px;
@@ -203,13 +202,13 @@ nav{
         margin-top:74px;
     }
     .row ul{
-    text-align:center;      
+    text-align:center;
 }
     .row ul li{
     margin-left:35px;
     margin-right:-20px;
     height:40px;
-    display: table-cell; 
+    display: table-cell;
 }
 }
 @media(min-width:970px){
@@ -234,17 +233,17 @@ nav{
     background-color:transparent;
 }
 #nav-content li a{
-     
+
    width:140px;
     vertical-align: text-top;
-    color: #3B5372 !important; 
+    color: #3B5372 !important;
     font-weight:bold;
-    line-height: 0px; 
-    font-size: 18px; 
-    letter-spacing: 0px; 
+    line-height: 0px;
+    font-size: 18px;
+    letter-spacing: 0px;
 }
-.navbar-default .navbar-nav>.open>a, 
-.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover{
     background-color: #D8D1C7 !important;
 }
@@ -256,48 +255,48 @@ nav{
     transition: 0.8s;
 }
 .date{
-    color: #3B5372 !important; 
-   
-    font-size: 16px; 
+    color: #3B5372 !important;
+
+    font-size: 16px;
 }
 #name{
-    color: #3B5372 !important; 
-   
-    font-size: 16px; 
+    color: #3B5372 !important;
+
+    font-size: 16px;
 
 }
 #name .fullname{
     padding-left:4px;
 }
 #block{
-    width: 255px; 
-    height: 73px; 
-    opacity: 100; 
-    background-color: #3B5372; 
+    width: 255px;
+    height: 73px;
+    opacity: 100;
+    background-color: #3B5372;
 }
 .mail{
-    width: 187px; 
-    height: 18px; 
-    opacity: 100; 
-    text-align: left; 
-    color: #D8D1C7;  
-    line-height: 0px; 
-    font-size: 15px; 
-    padding:13px 51px 15px 17px; 
+    width: 187px;
+    height: 18px;
+    opacity: 100;
+    text-align: left;
+    color: #D8D1C7;
+    line-height: 0px;
+    font-size: 15px;
+    padding:13px 51px 15px 17px;
 }
 #logout{
-    width: 54px; 
-    height: 18px; 
-    opacity: 100; 
-    text-align: left; 
-    color: #D8D1C7; 
-    font-weight: 900; 
-    font-size: 15px; 
+    width: 54px;
+    height: 18px;
+    opacity: 100;
+    text-align: left;
+    color: #D8D1C7;
+    font-weight: 900;
+    font-size: 15px;
     letter-spacing: 0px;
-    padding-left:65%; 
+    padding-left:65%;
 }
 #logout:hover{
-    background-color: #3B5372; 
+    background-color: #3B5372;
     color: #D8D1C7;
     text-decoration: none;
 }
@@ -310,9 +309,9 @@ nav{
 #column{
     padding-top:30px;
 }
- /*iPads (portrait and landscape) ----------- 
-@media only screen 
-and (min-device-width : 768px) 
+ /*iPads (portrait and landscape) -----------
+@media only screen
+and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 .dash{
     padding-top:20px;
@@ -323,12 +322,12 @@ and (max-device-width : 1024px) {
 }*/
 .dash .row #column .card{
     border:2px solid rgba(156, 205, 227, 0.99);
-    height: 222px; 
-    border-radius: 3px; 
-    opacity: 100; 
-    background-color: #FFFFFF; 
-    border: solid 2px #9CCDE3; 
-    box-shadow: 1px 1px 4px 0px gray; 
+    height: 222px;
+    border-radius: 3px;
+    opacity: 100;
+    background-color: #FFFFFF;
+    border: solid 2px #9CCDE3;
+    box-shadow: 1px 1px 4px 0px gray;
 }
 .dash .row #column .card:hover{
     cursor: pointer;
@@ -343,7 +342,7 @@ and (max-device-width : 1024px) {
     letter-spacing: 0px;
     font-weight: bold;
     padding-top: 17px;
-   
+
 }
 .text1 {
     opacity: 100;
@@ -361,15 +360,15 @@ and (max-device-width : 1024px) {
 .toc{
     float: right;
     margin-top: 17px;
-    width: 24px; 
-    height: 24px; 
+    width: 24px;
+    height: 24px;
 }
 
 .toc1 {
      margin-top: -10px;
     float: right;
-    width: 24px; 
-    height: 24px; 
+    width: 24px;
+    height: 24px;
 }
 .header{
     padding-left:19px;
@@ -383,7 +382,6 @@ and (max-device-width : 1024px) {
     text-align: -webkit-center;
     vertical-align: middle;
     line-height: 35px;
-    margin-left:15%;
     font-size: 18px;
     font-weight: bold;
     color:rgba(255, 255, 255, 1);
@@ -401,7 +399,6 @@ and (max-device-width : 1024px) {
     text-align: -webkit-center;
     vertical-align: middle;
     line-height: 35px;
-    margin-left:30%;
     font-size: 18px;
     font-weight: bold;
     color:rgba(255, 255, 255, 1);
@@ -413,13 +410,14 @@ and (max-device-width : 1024px) {
     color: rgba(227, 86, 86, 1);
 }
 #dash-attendanceSummary{
-    margin:50px 53px 0px 22%;
+    margin-top:50px;
+    width:100%;
 
     }
 #dashMark{
     line-height: 0;
-    width: 187px; 
-    height: 59px;      
+    width: 187px;
+    height: 59px;
 }
 #dashMarked{
     width: 67px;
@@ -429,10 +427,10 @@ and (max-device-width : 1024px) {
     float:right;
 }
 .aSummary-date{
-    opacity: 1;  
-    text-align: left; 
+    opacity: 1;
+    text-align: center;
     color: #6FB8D9;
-    margin:35px 0 0 18px; 
+    margin-top:35px;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -441,10 +439,10 @@ and (max-device-width : 1024px) {
      margin:30px;
 }
 #falloutEmp{
-    width: 75px; 
+    width: 75px;
     height: 78px;
     font-size:64px;
-    color: rgba(227, 86, 86, 1); 
+    color: rgba(227, 86, 86, 1);
 }
 #totalEmp{
     font-size:14px;
@@ -452,7 +450,7 @@ and (max-device-width : 1024px) {
 }
 .aFallout-date{
     color: #6FB8D9;
-    margin:18px; 
+    margin:18px;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -461,10 +459,10 @@ and (max-device-width : 1024px) {
      margin:30px;
 }
 #empLeave{
-    width: 75px; 
+    width: 75px;
     height: 78px;
     font-size:64px;
-    color: rgba(227, 86, 86, 1); 
+    color: rgba(227, 86, 86, 1);
 }
 #uptilLeave{
     font-size:14px;
@@ -472,15 +470,15 @@ and (max-device-width : 1024px) {
 }
 .lSummary-date{
     color: #6FB8D9;
-    margin:18px; 
+    margin:18px;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.5px;
 }
-.card-action .tooltiptext {
+.card-action1 .tooltiptext {
     visibility: hidden;
-    width: 162px; 
-    height: 27px; 
+    width: 162px;
+    height: 27px;
     background-color: rgba(4, 4, 4, 0.59);
     color: rgba(255, 255, 255, 1);
     text-align: center;
@@ -488,6 +486,7 @@ and (max-device-width : 1024px) {
     margin:10px;
     padding: 5px 0;
     font-size:12px;
+    font-weight: 300;
     vertical-align: middle;
     line-height: 15px;
     margin-left:100px;
@@ -495,7 +494,28 @@ and (max-device-width : 1024px) {
     position: absolute;
     z-index: 1;
 }
-.card-action:hover .tooltiptext {
+.card-action1:hover .tooltiptext {
+    visibility: visible;
+}
+.card-action2 .tooltiptext {
+    visibility: hidden;
+    width: 162px;
+    height: 27px;
+    background-color: rgba(4, 4, 4, 0.59);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    border-radius: 6px;
+    margin:37px;
+    padding: 5px 0;
+    font-size:12px;
+    vertical-align: middle;
+    line-height: 15px;
+    margin-left:290px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+.card-action2:hover .tooltiptext {
     visibility: visible;
 }
 /*search button*/
@@ -547,7 +567,7 @@ and (max-device-width : 1024px) {
 }
 #adv-search input{
     border: 0.5px solid rgba(59, 83, 114, 1) !important;
-    border-left:none; 
+    border-left:none;
 }
 ::-webkit-input-placeholder { /* Chrome */
   color: rgba(59, 83, 114, 1);
@@ -563,11 +583,12 @@ and (max-device-width : 1024px) {
   color: rgba(59, 83, 114, 1);
   opacity: 1;
 }
+
 @media screen and (min-width: 768px) {
     #adv-search {
         width: 500px;
         margin: 0 auto;
-        
+
     }
     #eng{
         padding-top:50px;
@@ -579,9 +600,10 @@ and (max-device-width : 1024px) {
         min-width: 500px;
     }
 }
+
 @media screen and (max-width: 767px) {
 #eng{
-    padding-top:90px;  
+    padding-top:90px;
 }
 }
 /*profile display*/
@@ -622,31 +644,31 @@ and (max-device-width : 1024px) {
 
 .alphabets li a.active{
     color: #4A5E77;
-    font-size: 15px; 
+    font-size: 15px;
 }
 
-.alphabets li a:hover 
+.alphabets li a:hover
 {
     text-decoration:none;
      color: #4A5E77;
      font-size: 15px;
-      
+
 }
 .alphabets li a:focus:hover {
   color: #4A5E77;
 }
 
 .alphabets li a{
-    color: #D8D1C7; 
+    color: #D8D1C7;
 }
 /*card content of profile*/
 #info-card {
-    width: 320px; 
-    height: 112px; 
+    width: 320px;
+    height: 112px;
     cursor: pointer;
-    border-radius: 3px; 
-    opacity: 100; 
-    background-color: #F0EDEA; 
+    border-radius: 3px;
+    opacity: 100;
+    background-color: #F0EDEA;
     box-shadow: 1px 1px 5px 0px gray;
     border:#F0EDEA;
 }
@@ -663,7 +685,9 @@ and (max-device-width : 1024px) {
 #section-row{
     margin-top:0px !important;
 }
-
+.profile{
+    width: 100%;
+}
 .profile-photo img {
     float:left;
     width:102px;
@@ -675,18 +699,18 @@ and (max-device-width : 1024px) {
     float:right;
     margin:6px 10px 0px 0px;
     width:190px;
-    color: #3B5372; 
-    font-size: 14px; 
+    color: #3B5372;
+    font-size: 14px;
 }
 .profile-info li{
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .profile-info .empname{
     font-weight:600;
-    font-family: Headlines;  
-    font-size: 16px; 
+    font-family: Headlines;
+    font-size: 16px;
 }
 .profile-info .email{
     font-size: 14px;
@@ -702,13 +726,13 @@ and (max-device-width : 1024px) {
     float:right;
     margin:10px 20px 0px 0px;
     width:140px;
-    color: #3B5372; 
-    font-size: 12px; 
+    color: #3B5372;
+    font-size: 12px;
 }
 .profile-info .empname{
     font-weight:600;
-    font-family: Headlines;  
-    font-size: 14px; 
+    font-family: Headlines;
+    font-size: 14px;
 }
 .profile-info .email{
     font-size: 12px;
@@ -727,8 +751,6 @@ and (max-device-width : 1024px) {
     font-size: 30px;
     text-align:center;
     text-shadow: 2px 2px wheat;
-    margin:15%;
-
-
-
+    margin: 15% auto;
+    width:100%;
 }

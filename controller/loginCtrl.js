@@ -1,33 +1,42 @@
+/**
+ * Login controller
+ *@define controller
+ *@param {string} loginCtrl - parameter refers to the controller used by HTML element
+ *@param {function} selfInvoked- dependencies are added in it
+ */
 angular.module('mainApp').controller('loginCtrl', function ($scope, $state, $auth, localStorageService) {
- 
-//  email and password validation expression
-  $scope.email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-  $scope.pwd = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-  var config = { method: 'POST', url: 'http://192.168.0.17:3000/login' };
+
+/**email and password validation regex pattern*/
+  $scope.email =hrDashData.email;
+  $scope.pwd = hrDashData.pwd;
+  console.log(hrDashData.pwd);
+
+/**dataloading icon*/
   $scope.dataLoading = false;
+
+/**
+*@method login- function to login
+*/
+console.log(hrDashData.config);
   $scope.login = function () {
     $scope.dataLoading = true;
-    $scope.loginError=false;
-    document.getElementById("pwd-label").style.color = "#3B5372";
-    document.getElementById("password").style.borderColor = "#3B5372";
-    $auth.login($scope.user, config)
+    $("#pwd-label").css("color" , "#3B5372");
+    $("#password").css("borderColor" , "#3B5372");
+    $auth.login($scope.user, hrDashData.config) //satelizer service method call
       .then(function (data) {
-        localStorageService.set("token", data.data);
-        console.log(config);
-        console.log("data_print", data.data)
+        localStorageService.set("token", data.data);//response data is stored in localStorageService
+        console.log("data_print"+data.data.emailId)
         console.log("You have successfully signed in!")
-        $state.go('home.DashBoard');
-        // $location.path('/');
+        $state.go('home.dashBoard');
       })
       .catch(function (error) {
         $scope.dataLoading = false;
-        $scope.loginError=true;
-        document.getElementById("pwd-label").style.color = "rgba(236, 13, 13, 1)";
-        document.getElementById("password").style.borderColor = "rgba(236, 13, 13, 1)";
+        $("#pwd-label").css("color" ,  "rgba(236, 13, 13, 1)");
+        $("#password").css("borderColor" , "rgba(236, 13, 13, 1)");
         console.log(error.data.message, error.status);
         $scope.error = "Invalid Password or Email Id";
         // toastr.error(error.data.message, error.status);
       });
   };
 
-});
+});//end of controller

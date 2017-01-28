@@ -1,23 +1,23 @@
-angular.module('mainApp').controller('engCtrl', function ($scope, engService, $state, restService, localStorageService) {
-    $scope.filters = { employeeName: "", employeeStatus: "", company: "" };
-    $scope.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+/**
+ * Engineers controller
+ *@define controller
+ *@param {string} engCtrl - parameter refers to the controller used by HTML element
+ *@param {function} selfInvoked- dependencies are added in it
+ */
+angular.module('mainApp').controller('engCtrl', function ($scope, utilService, $state,restService) {
+    $scope.filters = hrDashData.filters;
+    $scope.alphabet = hrDashData.alphabets;
 
     var data;
 
-    //calling empService for data...
-    var token = localStorageService.get('token');
-    // data loading icon...
     //Engineer page display..
     $scope.engPage = function () {
+        $scope.dataLoading = true; // data loading icon...
 
-        $scope.dataLoading = true;
-        var query = { token: token };
         //restService call for fetching data
-        var promise = restService.getRequest('searchEmployeeByName', query)
-        promise.then(function (data) {
-            data = engService.sorting(data);
-            $scope.profile = engService.createSection(data);
+        restService.getRequest('searchEmployeeByName').then(function (data) {
+            data = utilService.sortingByName(data);//sorting by name
+            $scope.profile = utilService.createSection(data);//creating section
             $scope.dataLoading = false;
 
             /*
@@ -32,17 +32,18 @@ angular.module('mainApp').controller('engCtrl', function ($scope, engService, $s
                 $('html,body').animate({ scrollTop: $("#" + id).offset().top - 120 }, 'slow');
             }
 
-
-
-
-            $scope.filterData = function () {
+            /*
+            *filltering Engineer data according to form
+            */
+            $scope.filterFormData = function () {
+                console.log("filter through form");
                 $scope.errorpage = false;
-                var filteredData = engService.filltering(data, $scope.filters);
+                var filteredData = utilService.filltering(data, $scope.filters);
                 if (filteredData.length != 0) {
-                    $scope.profile = engService.createSection(filteredData);
+                    $scope.profile = utilService.createSection(filteredData);
                 }
                 else {
-                    $scope.profile = engService.createSection(filteredData);
+                    $scope.profile = utilService.createSection(filteredData);
                     $scope.errorpage = true;
                 }
                 $('.dropdown.open .dropdown-toggle').dropdown('toggle');
@@ -51,4 +52,3 @@ angular.module('mainApp').controller('engCtrl', function ($scope, engService, $s
     }
 
 });
-

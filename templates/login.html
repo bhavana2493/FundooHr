@@ -15,11 +15,13 @@
                     </md-input-container>
                     <button ng-disabled="form.$invalid || dataLoading" type="submit" class="md-raised">Login </button>
                     <span class="loader">
+                        <!--Loader is displayed until get response from server-->
                             <center>
                                 <img ng-if="dataLoading" src="images/loader.gif" width="25px" height="25px" />
                             </center>
                     </span>
-                    <span ng-if="loginError" class="text-danger">{{ error }}</span>
+                    <!--Error message if login failed-->
+                    <span ng-hide="dataLoading" class="text-danger">{{ error }}</span>
                     <!--<div>Login</div>-->
                 </form>
             </div>
